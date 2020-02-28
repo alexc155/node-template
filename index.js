@@ -1,8 +1,8 @@
 #! /usr/bin/env node
-"use strict";
+'use strict';
 
-const updateNotifier = require("update-notifier");
-const pkg = require("./package.json");
+const updateNotifier = require('update-notifier');
+const pkg = require('./package.json');
 
 function showHelp() {
   log.info(`
@@ -29,13 +29,13 @@ function main() {
   });
 
   let action = process.argv[2];
-  action = action || "";
+  action = action || '';
   const args = process.argv.slice(3);
 
   switch (action.toLowerCase()) {
-    case "-h":
-    case "--help":
-    case "":
+    case '-h':
+    case '--help':
+    case '':
     case undefined:
     default:
       showHelp();
