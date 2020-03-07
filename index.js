@@ -4,7 +4,7 @@
 const updateNotifier = require('update-notifier');
 const pkg = require('./package.json');
 
-function showHelp() {
+const showHelp = () => {
   log.info(`
   Description.
 
@@ -20,7 +20,7 @@ function showHelp() {
 `);
 }
 
-function main() {
+const main = () => {
   updateNotifier({
     pkg,
     updateCheckInterval: 0
