@@ -6,7 +6,7 @@ const sinon = require('sinon');
 const sut = require('./');
 
 describe('#utils', () => {
-  test('logs info messages', () => {
+  it('logs info messages', () => {
     var consoleLog = console.log;
     console.log = () => {};
     sinon.spy(console, 'log');
@@ -16,7 +16,7 @@ describe('#utils', () => {
     console.log = consoleLog;
   });
 
-  test('logs error messages', () => {
+  it('logs error messages', () => {
     var consoleError = console.error;
     console.error = () => {};
     sinon.spy(console, 'error');

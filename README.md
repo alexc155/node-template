@@ -2,6 +2,7 @@
 [![License](https://img.shields.io/npm/l/node-template)](https://www.npmjs.com/package/node-template)
 [![NPM Downloads](https://img.shields.io/npm/dm/node-template.svg?style=flat-square)](https://www.npmjs.com/package/node-template)
 [![Build Status](https://travis-ci.org/alexc155/node-template.svg?branch=master)](https://travis-ci.org/alexc155/node-template)
+[![Node.js CI](https://github.com/alexc155/node-template/workflows/Node.js%20CI/badge.svg)](https://github.com/alexc155/node-template/actions?query=workflow%3A%22Node.js+CI%22)
 [![Coverage Status](https://coveralls.io/repos/github/alexc155/node-template/badge.svg?branch=master)](https://coveralls.io/github/alexc155/node-template?branch=master)
 
 [![dependencies Status](https://david-dm.org/alexc155/node-template/status.svg)](https://david-dm.org/alexc155/node-template)

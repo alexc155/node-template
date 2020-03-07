@@ -29,7 +29,7 @@ afterEach(() => {
 });
 
 describe('#config', () => {
-  test('writes a value to the config file', () => {
+  it('writes a value to the config file', () => {
     sut.writeConfig('setting', 'value');
     // Run a second time to run thru' if the config file was missing.
     sut.writeConfig('setting', 'value');
@@ -42,7 +42,7 @@ describe('#config', () => {
     );
   });
 
-  test('errors writing an invalid setting to the config file', () => {
+  it('errors writing an invalid setting to the config file', () => {
     const result = sut.writeConfig(undefined, 'value');
 
     expect(result).to.equal(false);
@@ -50,7 +50,7 @@ describe('#config', () => {
     expect(console.error.calledWith('Error in writeConfig: ')).to.equal(true);
   });
 
-  test('reads a setting from the config file', () => {
+  it('reads a setting from the config file', () => {
     writeFileSync(
       CONFIG_FILE,
       JSON.stringify({
@@ -63,7 +63,7 @@ describe('#config', () => {
     expect(setting).to.equal('value');
   });
 
-  test("returns the default value when reading a setting if the setting doesn't exist and there is a default", () => {
+  it("returns the default value when reading a setting if the setting doesn't exist and there is a default", () => {
     writeFileSync(
       CONFIG_FILE,
       JSON.stringify({
@@ -76,7 +76,7 @@ describe('#config', () => {
     expect(setting).to.equal('/path/to/files');
   });
 
-  test("errors when reading a setting from the config file if the setting doesn't exist and there is no default", () => {
+  it("errors when reading a setting from the config file if the setting doesn't exist and there is no default", () => {
     writeFileSync(
       CONFIG_FILE,
       JSON.stringify({
@@ -91,7 +91,7 @@ describe('#config', () => {
     expect(console.error.calledWith('Config setting does not exist')).to.equal(true);
   });
 
-  test("errors when reading a setting from the config file if the config file doesn't exist", () => {
+  it("errors when reading a setting from the config file if the config file doesn't exist", () => {
     writeFileSync(
       CONFIG_FILE,
       JSON.stringify({
